@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-loading {
+  animation: loading 2s ease-out forwards;
+}
+
+@keyframes dots {
+  0%, 20% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.dot {
+  animation: dots 1.5s infinite;
+  opacity: 0;
+}
+
+
+.dot-1 {
+  animation-delay: 0s;
+}
+
+
+.dot-2 {
+  animation-delay: 0.3s;
+}
+
+
+.dot-3 {
+  animation-delay: 0.6s;
+}
