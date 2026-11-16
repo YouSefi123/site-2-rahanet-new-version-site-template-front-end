@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export default function Header() {
+export default function HeaderBanner() {
   return (
     <div className="">
       {/* header ribbon */}
@@ -12,8 +12,13 @@ export default function Header() {
         {/* left text */}
         <div className="text-white">
           <motion.h1
-            initial={{ x: -400, opacity: 0, color: "#59168B" }}
-            animate={{ x: 0, opacity: 1, color: "white" }}
+            initial={{
+              x: -400,
+              opacity: 0,
+              color: "#59168B",
+              filter: "blur(5px)",
+            }}
+            animate={{ x: 0, opacity: 1, color: "white", filter: "blur(0px)" }}
             transition={{ duration: 0.5, type: "keyframes" }}
           >
             Watch:{" "}
@@ -26,8 +31,13 @@ export default function Header() {
         {/* icons of social media */}
         <div className="sm:flex gap-5 hidden">
           <motion.div
-            initial={{ x: 400, opacity: 0, color: "#59168B" }}
-            animate={{ x: 0, opacity: 1, color: "white" }}
+            initial={{
+              x: 400,
+              opacity: 0,
+              color: "#59168B",
+              filter: "blur(5px)",
+            }}
+            animate={{ x: 0, opacity: 1, color: "white", filter: "blur(0px)" }}
             transition={{ duration: 0.5, type: "keyframes" }}
             className=""
           >
@@ -37,8 +47,13 @@ export default function Header() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 400, opacity: 0, color: "#59168B" }}
-            animate={{ x: 0, opacity: 1, color: "white" }}
+            initial={{
+              x: 400,
+              opacity: 0,
+              color: "#59168B",
+              filter: "blur(5px)",
+            }}
+            animate={{ x: 0, opacity: 1, color: "white", filter: "blur(0px)" }}
             transition={{ duration: 1, type: "keyframes" }}
             className=""
           >
@@ -48,8 +63,13 @@ export default function Header() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 400, opacity: 0, color: "#59168B" }}
-            animate={{ x: 0, opacity: 1, color: "white" }}
+            initial={{
+              x: 400,
+              opacity: 0,
+              color: "#59168B",
+              filter: "blur(5px)",
+            }}
+            animate={{ x: 0, opacity: 1, color: "white", filter: "blur(0px)" }}
             transition={{ duration: 1.5, type: "keyframes" }}
             className=""
           >
