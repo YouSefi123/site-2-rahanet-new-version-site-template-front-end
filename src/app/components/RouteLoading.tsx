@@ -65,7 +65,7 @@ export default function RouteLoading() {
 
       timer.current = setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 1700);
     }
   }, [pathname]);
 
@@ -78,7 +78,7 @@ export default function RouteLoading() {
   if (!loading) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/80 backdrop-blur-sm">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-white/80 backdrop-blur-sm">
       <div className="loader" />
     </div>
   );
