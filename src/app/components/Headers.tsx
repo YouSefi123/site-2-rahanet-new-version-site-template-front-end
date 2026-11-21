@@ -5,6 +5,7 @@ import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { UserCircle2Icon } from "lucide-react";
 
 const nvas = [
   { id: 1, title: "Home", href: "/" },
@@ -37,13 +38,29 @@ export default function Headers() {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden sm:flex gap-10 font-semibold text-[#59168B]">
+        <motion.nav
+          initial={{ y: -30, opacity: 0, filter: "blur(5px)" }}
+          animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+          className="hidden sm:flex gap-10 font-semibold text-[#59168B]"
+        >
           {nvas.map((header) => (
             <Link key={header.id} href={header.href}>
               {header.title}
             </Link>
           ))}
-        </nav>
+        </motion.nav>
+
+        {/* sign in button */}
+        <motion.a
+          initial={{ x: 100, opacity: 0, filter: "blur(5px)" }}
+          animate={{ x: 0, opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.5 }}
+          className="text-[#59168B] hidden sm:flex sm:gap-2"
+          href="/login"
+        >
+          <span>{<UserCircle2Icon color="#59168B" />}</span>{" "}
+          <span>Sign In</span>
+        </motion.a>
 
         {/* Mobile Button */}
         <motion.button
